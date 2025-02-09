@@ -500,7 +500,7 @@ h3 {
   }
 } */
 
-.chatbot {
+/* .chatbot {
   .chatbot-blue {
     background-color: var(--blue-100);
     border-radius: 30px;
@@ -595,7 +595,97 @@ h3 {
       }
     }
   }
+} */
+/* Add this to your styles.css */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+input,
+textarea {
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+.contact {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: var(--blue-100);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.contact textarea {
+  resize: vertical;
+}
+
+.contact button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  background-color: var(--base-800);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: var(--blue);
+}
+
+.contact .form-status {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
 .footer {
   background-color: #1a1a1a;
   color: #fff;
@@ -623,12 +713,12 @@ h3 {
 }
 
 .footer-links a {
-  color: #facc15;
+  color: var(--yellow);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #f59e0b;
+  color: var(--base-100);
 }

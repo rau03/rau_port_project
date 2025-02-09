@@ -265,7 +265,69 @@
           </a>
         </div>
       </section> -->
-      <section id="contact" class="chatbot container">
+      <section id="contact" class="contact container">
+        <h2>Contact Me</h2>
+        <p>
+          Have a question or want to work together? Fill out the form below.
+        </p>
+
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/xovjlrbl"
+          method="POST"
+        >
+          <div class="mb-4">
+            <label for="name" class="block text-gray-700 font-medium mb-2"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+              class="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-medium mb-2"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              class="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div class="mb-6">
+            <label for="message" class="block text-gray-700 font-medium mb-2"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Your Message"
+              required
+              class="w-full p-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-3 bg-blue-600 text-white text-lg rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            Send Message
+          </button>
+          <p id="form-status" class="form-status mt-4 text-lg"></p>
+        </form>
+      </section>
+      <!-- <section id="contact" class="chatbot container">
         <h2>
           <small> Talk to me </small>
           Chatbot
@@ -284,7 +346,7 @@
               it. I'm currently looking for new opportunities so if you have a
               project you think I'd be a good fit for, please get in touch!
             </p>
-            <a href="img/christoper_p_rau_software_developer_resume.pdf" class="button black"
+            <a href="img/christoper_p_rau_software_developer_resume.pdf" class="button black" target="_blank"
               >Download Resume</a
             >
           </div>
@@ -292,6 +354,7 @@
             <div class="scroll-area">
               <ul id="chat-log">
                 <li>
+
                   <span class="avatar bot">AI</span>
                   <div class="message">
                     Hi, I'm a friendly chatbot that lets you interactive with
@@ -309,18 +372,19 @@
             <div class="chat-message">
               <input
                 type="text"
-                placeholder="Hey Adrian, what skills are you best at?"
+                placeholder="Hey Chris, what skills are you best at?"
               />
               <button class="button black">Send</button>
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
     <footer class="footer">
       <div class="footer-container">
         <p>© 2025 Chris Rau | Software Developer</p>
         <div class="footer-links">
+          <a href="#">Home</a>
           <a href="www.linkedin.com/in/raucp">LinkedIn</a>
           <a href="https://github.com/rau03">GitHub</a>
           <a href="mailto:chris_rau@outlook.com">Email</a>
