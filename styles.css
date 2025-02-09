@@ -45,6 +45,9 @@ header {
   max-width: 1440px;
   margin: auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* position: sticky;
+  top: 0;
+  z-index: 1000; */
 
   .logo-holder {
     display: flex;
@@ -394,7 +397,7 @@ h3 {
     }
   }
 }
-
+/* 
 .bento {
   .bento-grid {
     display: grid;
@@ -580,4 +583,4 @@ h3 {
       }
     }
   }
-}
+} */
