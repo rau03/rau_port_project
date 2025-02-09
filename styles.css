@@ -329,7 +329,7 @@ h3 {
   }
 }
 
-/* .work-experience {
+.work-experience {
   .jobs {
     display: flex;
     gap: 30px;
@@ -393,9 +393,9 @@ h3 {
       }
     }
   }
-} */
+}
 
-/* .bento {
+.bento {
   .bento-grid {
     display: grid;
     grid-gap: 30px;
@@ -483,9 +483,9 @@ h3 {
       }
     }
   }
-} */
+}
 
-/* .chatbot {
+.chatbot {
   .chatbot-blue {
     background-color: var(--blue-100);
     border-radius: 30px;
@@ -580,4 +580,4 @@ h3 {
       }
     }
   }
-} */
+}
