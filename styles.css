@@ -45,9 +45,6 @@ header {
   max-width: 1440px;
   margin: auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  /* position: sticky;
-  top: 0;
-  z-index: 1000; */
 
   .logo-holder {
     display: flex;
@@ -199,20 +196,28 @@ h1 {
   @media (max-width: 1024px) {
     flex-direction: column;
   }
-  .hero-blue {
+
+  .hero-blue,
+  .hero-yellow {
     flex: 1;
-    background-color: var(--blue-100);
     border-radius: 30px;
     padding: 30px;
-
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    span {
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
+    align-items: center;
+  }
+
+  .hero-blue {
+    background-color: var(--blue-100);
+    padding-right: 40px; /* Ensure padding balance with yellow */
+  }
+
+  .hero-yellow {
+    background-color: var(--yellow);
+    padding-left: 40px; /* Adjust padding to balance */
+  }
+
+  .hero-blue {
     .call-to-action {
       margin-top: 20px;
       margin-bottom: 10px;
@@ -221,6 +226,7 @@ h1 {
         margin-bottom: 10px;
       }
     }
+
     .social-links {
       a {
         &:hover {
@@ -229,24 +235,18 @@ h1 {
       }
     }
   }
-  .hero-yellow {
-    flex: 1;
-    display: flex;
-    background-color: var(--yellow);
-    border-radius: 30px;
-    padding: 0px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* align-items: flex-end; */
-    img {
-      /* margin-top: -60px; */
-      max-width: 80%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-      /* max-width: 420px; */
-      /* margin-bottom: -10px; */
+
+  .hero-yellow img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  @media (max-width: 1024px) {
+    .hero-blue,
+    .hero-yellow {
+      padding: 20px; /* Adjust padding for smaller screens */
     }
   }
 }
@@ -352,7 +352,7 @@ h3 {
       flex-direction: column;
     }
     article {
-      background-color: var(--yellow-100);
+      background-color: var(--yellow);
       padding: 30px;
       border-radius: 30px;
       flex: 1;
@@ -410,193 +410,6 @@ h3 {
   }
 }
 
-/* .bento {
-  .bento-grid {
-    display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    height: 960px;
-    @media (max-width: 1024px) {
-      grid-template-rows: repeat(8, 1fr);
-    }
-    @media (max-width: 768px) {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      height: auto;
-    }
-    .bento-item {
-      padding: 30px;
-      background-color: var(--base-100);
-      border-radius: 15px;
-      position: relative;
-      overflow: hidden;
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        object-fit: cover;
-        transition: ease 3s all;
-      }
-      &:hover {
-        img {
-          transform: scale(1.2);
-        }
-      }
-      @media (max-width: 768px) {
-        height: 240px;
-      }
-      &:nth-child(1) {
-        grid-column: span 2;
-        grid-row: span 2;
-        @media (max-width: 1024px) {
-          grid-column: span 2;
-          grid-row: span 2;
-        }
-      }
-      &:nth-child(2) {
-        grid-column: span 2;
-        grid-row: span 1;
-        @media (max-width: 1024px) {
-          grid-column: span 3;
-          grid-row: span 2;
-        }
-      }
-      &:nth-child(3) {
-        grid-column: span 1;
-        grid-row: span 1;
-        @media (max-width: 1024px) {
-          grid-column: span 3;
-          grid-row: span 2;
-        }
-      }
-      &:nth-child(4) {
-        grid-column: span 1;
-        grid-row: span 1;
-        @media (max-width: 1024px) {
-          grid-column: span 2;
-          grid-row: span 4;
-        }
-      }
-      &:nth-child(5) {
-        grid-column: span 2;
-        grid-row: span 1;
-        @media (max-width: 1024px) {
-          grid-column: span 3;
-          grid-row: span 2;
-        }
-      }
-      &:nth-child(6) {
-        grid-column: span 5;
-        grid-row: span 3;
-        @media (max-width: 1024px) {
-          grid-column: span 5;
-          grid-row: span 2;
-        }
-      }
-    }
-  }
-} */
-
-/* .chatbot {
-  .chatbot-blue {
-    background-color: var(--blue-100);
-    border-radius: 30px;
-    padding: 30px;
-    gap: 30px;
-    display: flex;
-    @media (max-width: 1024px) {
-      flex-direction: column;
-    }
-    p {
-      margin-bottom: 30px;
-    }
-    .chat-info {
-      flex: 3;
-      padding-right: 30px;
-    }
-    .chat-box {
-      flex: 4;
-      background: white;
-      border-radius: 15px;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      .scroll-area {
-        max-height: 300px;
-        height: 300px;
-        overflow-y: scroll;
-        ul {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          gap: 15px;
-          li {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-
-            &:nth-child(even) {
-              text-align: right;
-              justify-content: flex-end;
-              flex-direction: row-reverse;
-              span {
-                background-color: var(--yellow);
-              }
-            }
-
-            span {
-              background-color: var(--blue-400);
-              width: 64px;
-              height: 64px;
-              border-radius: 50%;
-              display: inline-flex;
-              align-items: center;
-              justify-content: center;
-              @media (max-width: 768px) {
-                width: 48px;
-                height: 48px;
-              }
-            }
-            div {
-              flex: 1;
-            }
-          }
-        }
-      }
-
-      .chat-message {
-        display: flex;
-        margin-top: 15px;
-        gap: 15px;
-        input {
-          border-radius: 10px;
-          flex: 1;
-          padding: 15px;
-          border: 1px solid transparent;
-          background-color: var(--base-100);
-          &:hover {
-            outline: none;
-            background-color: white;
-            border: 1px solid var(--base-100);
-          }
-          &:focus {
-            outline: none;
-            background-color: white;
-            border: 1px solid var(--base-100);
-          }
-        }
-        button {
-          border: none;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-} */
-/* Add this to your styles.css */
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -687,7 +500,7 @@ textarea:focus {
 }
 
 .footer {
-  background-color: #1a1a1a;
+  background-color: var(--base-800);
   color: #fff;
   text-align: center;
   padding: 20px 0;
